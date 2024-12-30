@@ -1,0 +1,90 @@
+*{
+  padding:0px;
+  margin:0px;
+}
+body{
+  background-image: url("neet background a148bce9-9b99-4e00-8910-6cd4ca0c4daf.png");
+  background-repeat: no-repeat;
+  background-size:2000px 1000px;
+}
+#slowmove{
+  position:relative;
+  left:-500px;
+  animation-name: slowmove;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(0.35, 1.03, 0.13, 2.19);
+}
+@keyframes slowmove{
+  from{
+    top:100px;
+    left:-500px;
+  }
+  to{
+    top:100px;
+    left:500px;
+  }
+}
+
+#nomove{
+  position:relative;
+  top:500px;
+  left:-700px;
+  animation: fadeIn 8s;
+}
+@keyframes fadeIn{
+
+  20%{ opacity:1;top:300px;left:500px;}
+  30%{opacity:0;top:100px;left:-100px;}
+  40%{opacity:1;top:100px;left:-500px;}
+  50%{opacity:0;top:300px;left:700px;}
+  60%{opacity:1;top:0px;left:-900px;}
+  70%{opacity:0;top:400px;left:500px;}
+  80%{opacity:1;top:200px;left:-100px;}
+  100%{opacity:0;top:0px;left:0px;}
+}
+
+#fastmove{
+  width:400px;
+  position:relative;
+  top:-500px;
+  left: 1500px;
+  
+  animation-name: fastmove;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function:cubic-bezier(0, 1.01, 0, 1.12);
+} 
+@keyframes fastmove{
+20%{
+  opacity:1;
+top:200px;
+left:1200px;
+}
+60%{
+  opacity:1;
+top:-100px;
+left:800px;
+}
+70%{
+  opacity:1;
+top:100px;
+left:300px;
+}
+80%{
+  opacity:1;
+top:-400px;
+left:0px;
+}
+100%{
+  opacity:0;
+top:0px;
+left:-100px;
+} 
+}
+
+/* #skeleton{
+  position:relative;
+  top:-120px;
+  left:190px;
+} */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <title>Duck Hunt</title>
+</head>
+<body>
+
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Player
+    const player = {
+        x: canvas.width / 2,
+        y: canvas.height - 50,
+        width: 50,
+        height: 50,
+        speed: 5
+    };
+
+    // Bullet
+    const bullet = {
+        x: 0,
+        y: 0,
+        width: 5,
+        height: 15,
+        speed: 7,
+        visible: false
+    };
+
+    // Handle keyboard input
+    const keys = {};
+    window.addEventListener("keydown", (e) => {
+        keys[e.key] = true;
+    });
+    window.addEventListener("keyup", (e) => {
+        keys[e.key] = false;
+    });
+
+    // Update function
+    function update() {
+        // Move player
+        if (keys["ArrowLeft"] && player.x > 0) {
+            player.x -= player.speed;
+        }
+        if (keys["ArrowRight"] && player.x < canvas.width - player.width) {
+            player.x += player.speed;
+        }
+
+        // Fire bullet
+        if (keys[" "] && !bullet.visible) {
+            bullet.x = player.x + player.width / 2 - bullet.width / 2;
+            bullet.y = player.y;
+            bullet.visible = true;
+        }
+
+        // Move bullet
+        if (bullet.visible) {
+            bullet.y -= bullet.speed;
+            if (bullet.y < 0) {
+                bullet.visible = false;
+            }
+        }
+    }
+
+    // Draw function
+    function draw() {
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw player
+        ctx.fillStyle = "#00F";
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+
+        // Draw bullet
+        if (bullet.visible) {
+            ctx.fillStyle = "#F00";
+            ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        }
+    }
+
+    // Game loop
+    function gameLoop() {
+        update();
+        draw();
+        requestAnimationFrame(gameLoop);
+    }
+
+    // Start the game loop
+    gameLoop();
+</script>
+
+</body>
+</html>
