@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    :root{
+      /* way to create custom-variable in CSS  */
+      /* we defined 2 variables in root so can be used any where in code  */
+      /* if we defined them in .container/.box then it can be only used to that space  */
+      --color:black;
+      --custom-width:500px;
+    }
+    .container{
+      background-color: beige;
+      height: 800px;
+      border: solid 2px var(--color);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box{
+      background-color: aqua;
+      height: 400px;
+      width: var(--custom-width);
+      border: solid 2px var(--color);
+      margin: 10px;
+       
+      /* x offset , y offset ,color  */
+      /* box-shadow: 10px -15px brown; */
+
+
+      /* x offset, y offset , blur radius(cant be negative),color  */
+      /* box-shadow: 10px 15px 5px brown; */
+
+      /* x offset , y offset , blur radius , spread radius , color  */
+      box-shadow: 10px 15px 5px 50px  brown;
+ 
+      /* inset---shasow comes inside  */
+      /* box-shadow: inset 10px 15px 5px 50px brown; */
+ 
+      /* multiple border  */
+      /* box-shadow: 10px 15px brown , 15px 15px green ; */
+    }
+    h3{
+      /* no spread radius here  */
+      /* x offset , y offset ,blur radius , color  */
+      /* text-shadow: 12px 13px 2px blue; */
+
+      text-shadow: 10px 11px 2px blue,11px 12px 2px red , 12px 13px 2px violet;
+     
+
+    }
+
+    span{
+      color: darkblue;
+    }
+    h2{
+      display:inline;
+    }
+    img{
+      height:100px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box">
+      <img src="codehelp.jpeg" alt="codehelp">
+      <h2>CODE <span>HELP</span></h2>
+      <h3>Welcome to CodeHelp</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellendus quasi reiciendis rem delectus maxime, tempore deserunt ratione quidem iste blanditiis vel quas eligendi, illo nemo a! Vitae quos quia deleniti eum reprehenderit. Magni omnis autem corporis eaque ex soluta laborum iusto, reiciendis voluptates fugit impedit, nulla doloribus dolor dolorum.</p>
+
+
+    </div>
+  </div>
+
+
+ 
+</body>
+</html>

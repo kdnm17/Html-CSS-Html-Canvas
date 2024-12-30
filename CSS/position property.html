@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    
+    img{
+      margin:10px;
+    }
+    div{
+      border:solid black 2px;
+      margin:200px;
+      height:1000px;
+    }
+    
+    .img1{
+       /* relative position change is corresponding to current window  */
+      position:relative;
+
+      /* top:100px; */
+      /* bottom:1000px; */
+      top:1000px;
+      bottom:1000px;
+
+      /* left meh hi space badadho 20px */ 
+      /* left:20px;  */
+      right:300px;
+      left:300px;
+      right:300px;
+      left:500px;
+      
+
+    } 
+    .container{
+     
+      position:relative;
+     
+    }
+    .img2{
+      /* position change is corresponding to nearest parent ancestor ..... */
+      /* here nearest position ancestor is div with class container  */
+
+      /* when position absolute is used the gap is not maintained for that respective image.. */
+      /* other image comes to that place  */
+
+      /* when mentioned position absolute for img2 gap for that not maintained so img 3 comes to that place now img2, img3 are in same place so called OVERLAPPING */
+      position:absolute;
+      top:100px;
+    } 
+      
+
+    .img8{
+      /* fixed in entire website  */
+      position:fixed;
+      bottom:0px;
+      right:0px;
+      /* left:100px;
+      right:100px;
+      top:100px;
+      bottom:100px; */
+    } 
+    /* STICKY */
+    /* It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). */
+   /* for STICKY You must also specify at least one of top, right, bottom or left for sticky positioning to work. */
+   /* in this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position. */
+    .img7{
+      position:sticky;
+      bottom:100px;
+    } 
+    </style>
+  
+
+</head>
+<body>
+
+  <div class="container">
+
+  <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img1">
+
+  <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img2">
+
+  <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img3">
+
+  <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img4">
+
+  
+
+  </div>
+
+  <div class="box">
+
+  <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img5">
+
+  <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img6">
+
+  <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img7">
+
+  <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img8">
+
+  
+
+
+
+  </div>
+
+
+  <div class="box">
+
+    <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img9">
+  
+    <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img10">
+  
+    <img src="pic_trulli.jpg" alt="fddb" width="200px"  height="200px" class="img11">
+  
+    <img src="img_girl.jpg" alt="vdf" width="200px" height="200px" class="img12">
+
+
+    </div>
+  
+    
+  
+  
+
+  
+   
+
+  
+</body>
+</html>

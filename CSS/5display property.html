@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    *{
+      padding:0px;
+      margin:10px;
+    }
+    /* all these are applied for block element  */
+    div{
+      border: solid red 2px;
+      width:200px;
+      height:100px;
+      padding:50px;
+      margin:50px;
+      box-sizing: border-box;
+    }
+
+    #spano{
+      color:blueviolet;
+      background-color: antiquewhite;
+      border:solid black 2px;
+      /* no showing width , height  */
+      width:100px;
+      height:250px;
+  
+
+      /* lets convert to block  */
+
+      display:block;
+  
+
+    }
+
+    #spant{
+      color:brown;
+      border:solid black 2px;
+      width:100px;
+      height:100px;
+      /* showing padding and not properly showing margin  */
+      padding:40px;
+
+      margin:100px;
+
+      /* lets convert to block  */
+      display:block;
+    }
+
+    #spanf{
+      border:solid black 2px;
+      width:100px;
+      height:100px;
+      padding:50px;
+      margin:300px;
+      display:inline-block;
+    }
+
+    #spans{
+      border:black solid 2px;
+      width:100px;
+      height:100px;
+      padding:50px;
+      margin:300px;
+
+
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- div is block element  -->
+  <div>
+    welcome 
+  </div>
+
+  <div>
+    welcome to website
+  </div>
+
+  <!-- span is inline element  -->
+
+  <span id="spano">Lorem ipsum dolor sit amet.</span>
+
+  <span id="spant">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, iste!</span>
+
+  <span id="spanf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laudantium!</span>
+
+  <span id="spans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nulla.</span>
+
+
+
+
+
+</body>
+</html>

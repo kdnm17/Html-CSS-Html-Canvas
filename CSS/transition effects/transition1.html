@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box{
+      height:500px;
+      width:500px;
+      border:solid black 2px;
+      background-color: antiquewhite;
+
+
+/* transition only applied to width so width slowly changing  */
+
+      transition-property: width;
+      transition-duration: 5s;
+      transition-timing-function: linear;
+      transition-delay: 1s;
+    }
+    .box:hover{
+      width:1000px;
+      /* transition-property is applied to only width so it is only slowly changing */
+      /* so backgroung color is given , but not slowly changing  */
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box"></div>
+</body>
+</html>

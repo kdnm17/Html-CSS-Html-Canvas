@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container{
+      height:1000px;
+      border:black solid 5px;
+    }
+    .box{
+      height:200px;
+      width:200px;
+      border:solid black 2px;
+      border-radius: 100px;
+      background-color: aliceblue;
+      margin:10px;
+    }
+    #box1{
+      position:relative;
+      left:1250px;
+      animation-name: wifi;
+      animation-duration: 5s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+      animation-direction: alternate;
+      /* The animation-fill-mode CSS property controls the styles of an animated element outside of its execution.  */
+    /* In other words, it controls what the element looks like before the animation starts and/or after the animation ends. */
+    }
+    @keyframes wifi{
+      from{
+        top:0px;
+        left:1250px;
+      }
+      to{
+        top:0px;
+        left:0px;
+
+      }
+    }
+      #box2{
+        position:relative;
+      animation-name: ranguluga;
+      animation-duration: 5s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      animation-direction: alternate;
+      /* animation-direction: alternate-reverse; */
+      /* animation-direction: unset; */
+      }
+      @keyframes ranguluga{
+       from{
+        top:0px;
+        left:0px;
+
+       }
+       to{
+        top:0px;
+        left:1250px;
+       }
+      }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container{
+      border:solid black 5px;
+      height:1000px;
+      display:flex;
+      /* flex-wrap: wrap;  */
+      
+    }
+    .box{
+      height:200px;
+      width:200px;
+      border:black solid 2px;
+      margin:10px;
+    }
+    #box1{
+      background-color: chartreuse;
+      order:5000;
+      /* ( off wrap property ) now as size decreases box1 shrinks with 4x speed  */
+      /* if wrap property is on it cant be observed  */
+      flex-shrink: 4;
+      
+
+    }
+    #box2{
+      background-color: cornflowerblue;
+            /* flex-grow is observed even when flex-wrap is there */
+            /* when flex-grow is used first it occupies remainning space  */
+      flex-grow:3;
+
+    }
+    #box3{
+      background-color: darkorange;
+
+    }
+    #box4{
+      background-color: darkolivegreen;
+      order:-1;
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box" id="box1">BOX1</div>
+    <div class="box" id="box2">BOX2</div>
+    <div class="box" id="box3">BOX3</div>
+    <div class="box" id="box4">BOX4</div>
+  </div>
+  
+</body>
+</html>

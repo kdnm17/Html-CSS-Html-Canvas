@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.box{
+height:500px;
+      width:500px;
+      border:solid black 2px;
+      background-color: antiquewhite;
+
+      /* transition-property: all;
+      transition-duration: 8s; */
+      transition-timing-function: linear;
+      transition-delay: 1s;
+
+      /* some short hand notation  */
+      /* it doesnt take 8s for completion ....width takes 4s , height takes 4s simultaneously... */
+      /* total work completed in 4s */
+      /* transition:width 4s,height 4s; */
+
+      transition:width 5s , height 2s; /*total time taken is 5s */
+
+      
+}
+.box:hover{
+  width:1000px;
+  /* color is slowly changing as transition-property is applied to all  */
+  background-color:blue;
+  height:1000px;
+}
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+  
+</body>
+</html>

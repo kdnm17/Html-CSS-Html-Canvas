@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <style>
+    *{
+      padding:0px;
+      margin:0px;
+      box-sizing: border-box;
+    }
+    .container{
+      background-color: beige;
+      height:1000px;
+      width:1500px;
+      border:black solid 5px;
+      margin:10px;
+      
+    }
+    .box{
+      background-color: blue;
+      width:100px;
+      height:100px;
+      border:black solid 2px;
+      margin:10px;
+      border-radius: 20px;
+    }
+    #box1{
+      position:relative; /*used in order that we can use left right.... properties */
+      animation-name: rightmovement;
+      animation-duration: 5s;
+      animation-delay: 2s; /*time gap before animation being started*/
+      animation-iteration-count: infinite;
+
+      /* by default is ease--slow start,fast,slow end  */
+      /* ease-in---slow start */
+      /* ease-out---slow end  */
+      /* linear--linear speed  */
+      /* cubic-beizer(n,n,n,n)  */
+      animation-timing-function:linear;
+
+      animation-direction: alternate;
+
+      /* animation-play-state: paused; */
+    }
+    @keyframes rightmovement{
+      from{
+        top:0px;
+        left:0px;
+
+      }
+      to{
+        top:0px;
+        left:1300px;
+
+      }
+    }
+    #box3{
+      position:relative;
+      animation-name: leftmovement;
+      animation-duration: 5s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function:linear;
+      animation-direction: alternate;
+      
+    }
+    @keyframes leftmovement{
+      from{
+        top:300px;
+        left:1300px;
+
+      }
+      to{
+        top:300px;
+        left:0px;
+      }
+    }
+    #box2{
+      background-color: blue;
+      width:100px;
+      height:100px;
+      border:black solid 2px;
+      margin:10px;
+      border-radius: 100px;
+      position:relative;
+      top:160px;
+      left:700px;
+
+      animation-name: circlemovement;
+      animation-duration: 10sec ;
+      animation-iteration-count: infinite;
+      animation-delay: 0sec;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+
+    }
+    @keyframes circlemovement{
+      /* here we need 4 states  */
+      0%{
+        top:0px;
+        left:0px;
+
+      }
+      30%{
+        top:0px;
+        left:1300px;
+
+      }
+      68%{
+        top:200px;
+        left:0px;
+
+      }
+      100%{
+        top:200px;
+        left:1300px;
+
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+  
+
+  <div class="container">
+
+    <div class="box" id="box1"></div>
+    <div id="box2"></div>
+    <div  class="box"    id="box3"></div>
+
+  </div>
+</body>
+</html>

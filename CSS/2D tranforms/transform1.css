@@ -1,0 +1,75 @@
+.container{
+  border:black solid 5px;
+  height:1000px;
+  background-color: antiquewhite;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.box{
+  width:500px;
+  height:500px;
+  border:black solid 2px;
+  background-color: aqua;
+ 
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+  /* margin:auto; */
+
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+
+
+
+}
+
+.box:hover{
+  /* rotation is made smooth with transition but rotation itself done by tranform  */
+  /* we use this transform in animations and transitions  */
+
+  /* transform:rotate(45deg); */
+
+  /* final pic making 45deg with x-axis */
+  /* transform:rotateX(45deg);   */
+
+  /* transform:rotateY(45deg); */
+
+  /* transform:rotateZ(45deg) */
+
+  /* transform:scale(2); */
+
+  /* transform:scaleX(2); */
+
+  /* transform:rotate(-360deg); */
+
+   /*tilt*/
+   /* transform:skew(45deg);   */
+
+   /* movement --translate(x,y)--resultant direction*/
+   /* transform:translate(300px,-500px) */
+
+   /* transform:translate(500px) rotate(360deg) scale(1.5) skew(20deg); */
+
+   /* transform:translate(300px) rotate(360); */
+/* both are diff 1st translate and then rotate is roatation in  direction of translation  */
+/* 1st rotate and then translate is translation in direction of rotation  */
+   /* transform:rotate(360deg) translate(500px); */
+
+
+   transform:matrix(1,2,3,4,5,6)
+
+
+
+}
+
+p{
+  font-size: 50px;
+}

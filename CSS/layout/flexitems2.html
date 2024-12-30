@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .container{
+      border:solid black 5px;
+      height:1000px;
+      display:flex;
+    }
+    .box{
+      width:200px;
+      /* height is not mentioned ..... so occupied complete space  */
+      margin:10px;
+      border:black solid 2px;
+
+    }
+    #box1{
+      background-color: chartreuse;
+      flex-grow: 1;
+
+    }
+    #box2{
+      background-color: cornflowerblue;
+      flex-grow: 1;  
+    }
+    #box3{
+      background-color: darkorange;
+      flex-grow: 1;
+    }
+    #box4{
+      background-color: darkolivegreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box" id="box1">BOX1</div>
+    <div class="box" id="box2">BOX2</div>
+    <div class="box" id="box3">BOX3</div>
+    <div class="box" id="box4">BOX4</div>
+  </div>
+  
+  
+</body>
+</html>

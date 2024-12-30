@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container{
+      background-color: #f5f5dc;
+      border:solid black 5px;
+      height:500px; 
+
+      /* by default direction of flex is a row */
+      display:flex;
+
+      /* row-reverse ---- boxes are arranged from left  */
+      flex-direction: row-reverse;
+
+      /* by default property is (no wrap)  */
+      /* as we decrease screen size boxes size decreases like from laptop to phone things will be squeized(messed up)  */
+      /* by using felx-wrap:wrap as size decreases things comes down (boxes size remains same until space available)(adjusts accordingly)  */
+      flex-wrap: wrap;
+
+      /* short hand notation  */
+      flex-flow: wrap row-reverse;
+
+      /* along main-axis things are applied  */
+      justify-content:space-evenly;
+      /* justify-content: center; */
+      /* justify-content: end; */
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+
+      /* along cross-axis things are applied  */
+      /* align-items: center; */
+      /* by removing the height given to box , stretch property can be visible  */
+      /* align-items: stretch; */
+
+      /* but here even not applying stretch the boxes are seem like stretched because by default(as no height mentioned) */
+
+
+      /* by decreasing size , boxes coming out of container box  */
+      overflow:auto;
+
+
+
+    }
+    .box{
+      /* height:200px; */
+      width:200px;  
+      border:black solid 2px;
+      margin:10px;
+    }
+    #box1{
+      background-color: chartreuse;
+
+    }
+    #box2{
+      background-color: cornflowerblue;
+
+    }
+    #box3{
+      background-color: darkorange;
+
+    }
+    #box4{
+      background-color: darkolivegreen;
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+  </div>
+  
+</body>
+</html>
